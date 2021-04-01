@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button/Button";
+import "./board.css";
 
 const Board = (): JSX.Element => {
     const doSomething = (): void => {
@@ -7,7 +8,7 @@ const Board = (): JSX.Element => {
     }
 
     return (
-        <React.Fragment>
+        <div className="game-board">
             <Button value="1" onClick={() => doSomething()} />
             <Button value="2" onClick={() => doSomething()} />
             <Button value="3" onClick={() => doSomething()} />
@@ -17,7 +18,7 @@ const Board = (): JSX.Element => {
             <Button value="7" onClick={() => doSomething()} />
             <Button value="8" onClick={() => doSomething()} />
             <Button value="9" onClick={() => doSomething()} />
-        </React.Fragment>
+        </div>
     );
 }
 
