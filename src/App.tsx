@@ -1,10 +1,8 @@
-import React from 'react';
+import Game from "./components/game/Game";
 
 const App = (): JSX.Element => {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <Game />
   );
 }
 
