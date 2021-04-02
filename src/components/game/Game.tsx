@@ -23,7 +23,7 @@ const Game = (): JSX.Element => {
     };
 
     return (
-        <Board />
+        <Board squares={board} onClick={handleClick} />
     );
 }
 
