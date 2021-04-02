@@ -6,12 +6,8 @@ interface SquareInterface {
     value: string;
 }
 
-const Button = ({ onClick, value }: SquareInterface): JSX.Element => {
-    return (
-        <button className="game-tile" onClick={onClick}>
-            {value}
-        </button>
-    );
-}
+const Button = ({ onClick, value }: SquareInterface): JSX.Element => (
+    <button className="game-tile" onClick={onClick}>{value}</button>
+)
 
 export default Button;
