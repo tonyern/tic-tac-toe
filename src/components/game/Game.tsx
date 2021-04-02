@@ -10,8 +10,17 @@ const Game = (): JSX.Element => {
     // Constantly check if the current move is a winning move or not.
     const winner = calculateWinner(board);
 
-    const handleClick = (): void => {
+    const handleClick = (i: number): void => {
+        const boardCopy = [...board];
 
+        // If user clicks an occupied square or game is won then return.
+        if (winner || boardCopy[i]) return;
+
+        // Puts an X or O in an empty square.
+        boardCopy[i] = xIsNext ? "X" : "O";
+        setBoard(boardCopy);
+        // Next player O.
+        setXIsNext(!xIsNext);
     };
 
     const jumpTo = (): void => {
