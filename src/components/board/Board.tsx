@@ -1,7 +1,7 @@
 import Button from "../button/Button";
 import "./board.css";
 
-const Board = (): JSX.Element => {
+const Board = ({ squares, onClick }): JSX.Element => {
     const doSomething = (square: string): void => {
         console.log(square + " was pressed");
     };
