@@ -14,7 +14,7 @@ all possible wins and looking up after every move.
 
 Go into your machine's terminal and copy and paste the command below.
 
-### `git clone https://github.com/tonyern/tic-tac-toe.git
+### `git clone https://github.com/tonyern/tic-tac-toe.git`
 
 Navigate into the tic-tac-toe directory. Type the command below to run program.
 
