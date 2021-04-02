@@ -1,4 +1,3 @@
-import { MouseEventHandler } from "react";
 import Button from "../button/Button";
 import "./board.css";
 

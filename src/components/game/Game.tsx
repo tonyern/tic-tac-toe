@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Board from "../board/Board";
 import { calculateWinner } from "../CalculateWinner";
 import "./game.css";
@@ -24,27 +24,15 @@ const Game = (): JSX.Element => {
         setXIsNext(!xIsNext);
     };
 
-    const jumpTo = (): void => {
-
-    };
-
-    const renderMoves = (): JSX.Element => {
-        return (
-            <div className="button-section">
-            <button className="start-btn" onClick={() => setBoard(Array(9).fill(null))}>
-                Start Game
-            </button>
-            </div>
-        );
-    };
-
     return (
         <>
             <Board squares={board} onClick={handleClick} />
             <div className="game-display">
                 <p>{winner ? "Winner: " + winner : "Next Player: " + (xIsNext ? "X" : "O")}</p>
+                <button className="start-btn" onClick={() => setBoard(Array(9).fill(null))}>
+                    Reset Game
+                </button>
             </div>
-            {renderMoves()}
         </>
     );
 }
