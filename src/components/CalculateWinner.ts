@@ -22,11 +22,3 @@ export const calculateWinner = (squares: (string | null)[]): string | null => {
 
     return null;
 }
-
-const squares: (string | null)[] = [
-    null, null, null,
-    "X", "X", "X",
-    null, null, null
-];
-
-console.log(calculateWinner(squares));
