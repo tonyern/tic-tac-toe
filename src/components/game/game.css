@@ -1,0 +1,15 @@
+.game-display {
+  width: 200px;
+  margin: 20px auto;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.button-section {
+  text-align: center;
+}
+
+.start-btn {
+  font-size: 48px;
+  font-weight: 500;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Board from "../board/Board";
 import { calculateWinner } from "../CalculateWinner";
+import "./game.css";
 
 const Game = (): JSX.Element => {
     // Initialize Tic-Tac-Toe board with 9 spots that are null.
@@ -27,12 +28,24 @@ const Game = (): JSX.Element => {
 
     };
 
-    const renderMoves = (): void => {
-
+    const renderMoves = (): JSX.Element => {
+        return (
+            <div className="button-section">
+            <button className="start-btn" onClick={() => setBoard(Array(9).fill(null))}>
+                Start Game
+            </button>
+            </div>
+        );
     };
 
     return (
-        <Board squares={board} onClick={handleClick} />
+        <>
+            <Board squares={board} onClick={handleClick} />
+            <div className="game-display">
+                <p>{winner ? "Winner: " + winner : "Next Player: " + (xIsNext ? "X" : "O")}</p>
+            </div>
+            {renderMoves()}
+        </>
     );
 }
 
